@@ -1,0 +1,5 @@
+This is a simple text file
+with a second and
+third line of text.
+
+We are at the end of that file.
