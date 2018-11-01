@@ -1,7 +1,8 @@
 def my_function():
     """
-    This is a simple python function, without any argument
-    :return: NoneType nothing return, just printed 'hello world'
+    This is a simple python function, with no argument.
+    It prints "Hello World"
+    :return: NoneType Nothing returned
     """
     print("Hello World")
 
@@ -15,9 +16,9 @@ my_function2()
 
 def who_knows(who="World"):
     """
-    This function simply prints out the given who value
+    This function simply prints out the given parameter value
     :param who: the value to print
-    :return: nothing return, only printed
+    :return: Nothing returned
     """
     print("Hello {}".format(who.capitalize()))
 
@@ -28,11 +29,11 @@ who_knows("patrick")
 
 def print_all(*args):
     """
-    Prints all given parameters' value
+    Prints all given parameters' value with a "=>" separator.
     :param args: tuple of elements to print
-    :return: Nothing returned, all are printed
+    :return: Nothing returned
     """
-    print(args, sep=',', end=". I've correctly printed all given values.")
+    print("VALUES: ", *args, sep=' => ', end=". It is done.")
 
 
 print_all("one", "two", "three")
