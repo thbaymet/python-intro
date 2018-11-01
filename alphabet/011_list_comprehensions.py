@@ -38,8 +38,6 @@ for x in range(5):
 
 print(my_list)
 
-my_list = []
-
 my_list = [x * y for x in range(5) for y in [2, 4, 19]]
 print(my_list)
 
