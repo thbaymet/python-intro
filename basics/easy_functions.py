@@ -101,9 +101,15 @@ def sort_only_composite_numbers(array):
     :param array: array of integers
     :return: array on which only composite numbers are sorted
     """
+    composites = sorted([n for n in array if not is_prime_number(n)])
+    i = 0
     for index, number in enumerate(array):
-        pass
+        if is_prime_number(number):
+            array[index] = number
+        else:
+            array[index] = composites[i]
+            i += 1
     return array
 
 
-print("sort_only_composite_numbers: ", sort_only_composite_numbers([10, 7, 6, 6]))
+print("sort_only_composite_numbers: ", sort_only_composite_numbers([23, 10, 7, 6, 6]))
