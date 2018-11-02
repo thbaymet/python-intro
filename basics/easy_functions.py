@@ -113,3 +113,21 @@ def sort_only_composite_numbers(array):
 
 
 print("sort_only_composite_numbers: ", sort_only_composite_numbers([23, 10, 7, 6, 6]))
+
+
+def lesser_of_two_evens(former, latter):
+    """
+    Returns the lesser of "former" and "latter" if both of them are even numbers.
+    Returns the greater of them if one or both numbers are odd numbers.
+    :param former: an integer number
+    :param latter: an integer number
+    :return: lesser of former and latter if both of them are even numbers, else greater of them
+    """
+    return min(former, latter) if former % 2 == 0 and latter % 2 == 0 else max(former, latter)
+
+
+print("lesser_of_two_evens: ", lesser_of_two_evens(2, 4))
+print("lesser_of_two_evens: ", lesser_of_two_evens(2, 5))
+
+
+
