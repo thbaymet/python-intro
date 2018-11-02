@@ -25,19 +25,3 @@ def who_knows(who="World"):
 
 who_knows()
 who_knows("patrick")
-
-
-def print_all(*args):
-    """
-    Prints all given parameters' value with a "=>" separator.
-    :param args: tuple of elements to print
-    :return: Nothing returned
-    """
-    print("VALUES: ", *args, sep=' => ', end=". It is done.")
-
-
-print_all("one", "two", "three")
-
-
-
-
