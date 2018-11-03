@@ -227,3 +227,15 @@ def other_side_of_seven(_):
 print("other_side_of_seven: ", other_side_of_seven(4))
 print("other_side_of_seven: ", other_side_of_seven(12))
 
+
+def spy_game(numbers):
+    code = [0, 0, 7, 'x']
+    for num in numbers:
+        if num == code[0]:
+            code.pop(0)
+    return len(code) == 1
+
+
+print("spy_game: ", spy_game([1, 0, 6, 0, 8, 9, 7]))  # True
+print("spy_game: ", spy_game([1, 0, 6, 0, 8, 9, 9]))  # False
+
