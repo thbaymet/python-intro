@@ -130,4 +130,65 @@ print("lesser_of_two_evens: ", lesser_of_two_evens(2, 4))
 print("lesser_of_two_evens: ", lesser_of_two_evens(2, 5))
 
 
+def first_fourth_capitalized(word):
+    """
+    Capitalize only first and fourth letters of a word
+    :param word: a string, one or multiple words
+    :return: 'word' with first and fourth letters capitalized
+    """
+    old = ''
+    for index, letter in enumerate(word):
+        old += str(letter).capitalize() if index in [0, 3] else letter
+    return old
+
+
+print("first_fourth_capitalized: ", first_fourth_capitalized('macdonald'))
+
+
+def mirrored_phrase(phrase):
+    """
+    Mirror a phrase by reversing the order of the words in it
+    :param phrase: string like a phrase or sequence of words
+    :return: a string with words in reversed order
+    """
+    words = phrase.split()
+    words.reverse()
+    return " ".join(words)
+
+
+print("mirrored_phrase: ", mirrored_phrase("I am ready"))
+
+
+def within_10_of(number):
+    return True if abs(number - 100) <= 10 or abs(number - 200) <= 10 else False
+
+
+print("within_10_of: ", within_10_of(90))  # True
+print("within_10_of: ", within_10_of(150))  # False
+
+
+def count_pattern_occurrence(pattern, string):
+    count = 0
+    for i in range(len(string)):
+        if string[i:].startswith(pattern):
+            count += 1
+    return count
+
+
+print("count_patter_occurrence: ", count_pattern_occurrence('hah', 'hahahah'))  # 3
+
+
+def paper_doll(string):
+    """
+    Given a string, this function returns it by multiplying 3 its every character
+    :param string: a string
+    :return: string on which every character is multiplied by 3
+    """
+    result = ''
+    for letter in string:
+        result += letter * 3
+    return result
+
+
+print("paper_doll: ", paper_doll("Hello"))
 
