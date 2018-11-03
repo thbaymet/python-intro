@@ -213,3 +213,17 @@ def longest_even_sub_list_size(number_list):
 
 print("longest_even_sub_list_size: ", longest_even_sub_list_size([9, 8, 5, 4, 4, 4, 2, 4, 1]))
 
+
+def other_side_of_seven(_):
+    """
+    Given an integer, it returns the number which is twice away from
+    the other side of the 7
+    :param _: an integer
+    :return: an integer which twice away from the other side of the 7
+    """
+    return 7 + (7 % _) * 2 if _ <= 7 else 7 - (_ % 7) * 2
+
+
+print("other_side_of_seven: ", other_side_of_seven(4))
+print("other_side_of_seven: ", other_side_of_seven(12))
+
