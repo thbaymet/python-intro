@@ -192,3 +192,24 @@ def paper_doll(string):
 
 print("paper_doll: ", paper_doll("Hello"))
 
+
+def longest_even_sub_list_size(number_list):
+    """
+    Given a list of integer, it finds the max length of the longest even number sub-list
+    https://www.geeksforgeeks.org/length-of-the-longest-subarray-with-only-even-elements/
+    :param number_list: a list of numbers
+    :return: the length of the longest even number sub-list
+    """
+    ans = 0
+    current_count = 0
+    for i in number_list:
+        if i % 2 == 0:
+            current_count += 1
+        else:
+            ans = max(ans, current_count)
+            current_count = 0
+    return ans
+
+
+print("longest_even_sub_list_size: ", longest_even_sub_list_size([9, 8, 5, 4, 4, 4, 2, 4, 1]))
+
