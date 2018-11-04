@@ -1,3 +1,7 @@
+import math
+import string
+
+
 def occurrence_is_odd(number, array):
     """
     Find if occurrence of the "number" in the "array" is odd or not
@@ -229,6 +233,11 @@ print("other_side_of_seven: ", other_side_of_seven(12))
 
 
 def spy_game(numbers):
+    """
+    Given a list of numbers, this function defines if 0, 0, 7 is in that list
+    :param numbers: list of numbers
+    :return: True if 0, 0, 7 is in the 'numbers', False else
+    """
     code = [0, 0, 7, 'x']
     for num in numbers:
         if num == code[0]:
@@ -239,3 +248,74 @@ def spy_game(numbers):
 print("spy_game: ", spy_game([1, 0, 6, 0, 8, 9, 7]))  # True
 print("spy_game: ", spy_game([1, 0, 6, 0, 8, 9, 9]))  # False
 
+
+def sphere_volume(radius):
+    """
+    Given the radius of a sphere, it return its volume
+    :param radius: a number, radius of a sphere
+    :return: volume of that sphere
+    """
+    return (4 / 3) * math.pi * math.pow(radius, 3)
+
+
+print("sphere_volume: ", sphere_volume(4))
+
+
+def ran_check(num, low, high):
+    """
+    Defines whether number 'num' is between 'low' and 'high' range or not
+    :param num: a number
+    :param low: a number
+    :param high: a number
+    :return: True if number 'num' is between 'low' and 'high', False else
+    """
+    return low <= num <= high
+
+
+print("ran_check: ", ran_check(3, 1, 5))
+
+
+def up_low(phrase):
+    """
+    Given a string, it prints number of uppercase and lowercase letters
+    :param phrase: a string
+    :return: Nothing returned, just printed
+    """
+    print("No. of uppercase letters: ", sum(1 for c in phrase if c.isupper()))
+    print("No. of lowercase letters: ", sum(1 for c in phrase if c.islower()))
+
+
+up_low("We are no MORE here !!!")
+
+
+def unique_list(elements):
+    """
+    Given a list of numbers, it returns unique form of that list
+    :param elements: list of numbers
+    :return: a list in which every element is present only once,
+    """
+    return list(set(elements))
+
+
+print("unique_list: ", unique_list([1, 1, 2, 3, 4, 2]))
+print("unique_list: ", unique_list('one upon a time'))
+
+
+def is_palindrome(word):
+    """
+    Given a string, it returns if that string reads the same backward as forward
+    :param word: a string
+    :return: True if the 'word' is palindrome, False else
+    """
+    return word == word[::-1]
+
+
+print("is_palindrome: ", is_palindrome('madam'))
+print("is_palindrome: ", is_palindrome('help'))
+
+
+def is_pangram(phrase, alphabet=string.ascii_lowercase):
+    return ''.join(sorted(set(phrase.lower().replace(' ', '')))) == alphabet
+
+
+print("is_pangram: ", is_pangram("The quick brown fox jumps over the lazy dog"))
