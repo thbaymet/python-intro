@@ -130,4 +130,10 @@ print("lesser_of_two_evens: ", lesser_of_two_evens(2, 4))
 print("lesser_of_two_evens: ", lesser_of_two_evens(2, 5))
 
 
+def animal_crackers(name):
+    words = name.split(' ')
+    return True if words[0].startswith(words[1][0]) else False
 
+
+print(animal_crackers('Levelheaded Llama'))
+print(animal_crackers('Crazy Kangoroo'))
